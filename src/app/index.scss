@@ -9,6 +9,10 @@ $primary-color: #3F51B5;
 $small: 320px;
 $large: 1024px;
 
+.angular-google-map-container {
+  height: calc(100vh - 56px);
+}
+
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector

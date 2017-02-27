@@ -1,0 +1,6 @@
+.flex.layout-column
+  %div#map
+    %ui-gmap-google-map{center:'map.center', zoom:'map.zoom'}
+      %ui-gmap-marker{coords:'map.user.position', options:'map.user.options', idkey:'map.user.marker.id'}
+        Your position
+

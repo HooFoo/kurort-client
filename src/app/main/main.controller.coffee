@@ -1,6 +1,5 @@
 angular.module 'kurort'
-  .controller 'MainController', ($timeout, webDevTec, toastr) ->
+  .controller 'MainController', () ->
     'ngInject'
-    vm = this
 
     return
