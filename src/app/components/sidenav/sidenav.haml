@@ -1,0 +1,33 @@
+%ul#nav-mobile.side-nav.fixed
+  %li.user-panel.parent-list-item
+    .indigo
+  %li.parent-list-item
+    %ul.collapsible{'data-collapsible': 'expandable'}
+      %li
+        %a.collapsible-header.indigo.active
+          %ng-md-icon.nav-items-icon{icon: 'map', style: 'fill: white'}
+          %span.badge
+            %ng-md-icon.more{icon: 'expand_more', style: 'fill: white'}
+            %ng-md-icon.less{icon: 'expand_less', style: 'fill: white'}
+          Map
+        .collapsible-body
+          %ul
+            %li
+              %a{ href: '#' }
+                %ng-md-icon{icon: 'my_location'}
+                My position
+            %li
+              %a{ href: '#' }
+                %ng-md-icon{icon: 'add_location'}
+                Add point
+      %li
+        .collapsible-header.indigo
+          %ng-md-icon.nav-items-icon{icon: 'chat', style: 'fill: white'}
+          %span.badge
+            %ng-md-icon.more{icon: 'expand_more', style: 'fill: white'}
+            %ng-md-icon.less{icon: 'expand_less', style: 'fill: white'}
+          Chat
+        .collapsible-body
+
+  %div.adwords-area
+    GOOGLE ADSENSE
