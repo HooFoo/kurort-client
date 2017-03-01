@@ -3,6 +3,7 @@ angular.module 'kurort'
 
     MapController = (uiGmapGoogleMapApi) ->
       'ngInject'
+      @mapReady = false
 
       @user =
         position:

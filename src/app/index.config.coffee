@@ -1,11 +1,10 @@
 angular.module 'kurort'
-  .config ($logProvider, toastrConfig) ->
+  .config ($logProvider, uiGmapGoogleMapApiProvider) ->
     'ngInject'
     # Enable log
     $logProvider.debugEnabled true
-    # Set options third-party lib
-    toastrConfig.allowHtml = true
-    toastrConfig.timeOut = 3000
-    toastrConfig.positionClass = 'toast-top-right'
-    toastrConfig.preventDuplicates = true
-    toastrConfig.progressBar = true
+    uiGmapGoogleMapApiProvider.configure
+      key: ''
+      v: '3.26'
+      libraries: 'weather,geometry,visualization'
+    return
