@@ -1,18 +1,16 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
-import VueMaterial from 'vue-material';
+
+import 'jquery/dist/jquery'
+import 'materialize-css/dist/js/materialize.min.js'
+import 'materialize-css/dist/css/materialize.min.css'
 
 import App from './App';
 import router from './router';
 
 Vue.config.productionTip = false;
 
-Vue.use(VueMaterial);
-
-Vue.material.registerTheme('default', {
-    primary: 'indigo'
-});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
