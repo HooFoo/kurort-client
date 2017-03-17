@@ -1,7 +1,7 @@
 <template lang="pug">
 div.row
-  div( ng-show='userCtrl.logged' )
-  div( ng-hide='userCtrl.logged' )
+  div( v-if='logged' )
+  div( v-else )
     .col.s12.login-form
       ul.tabs.indigo
         li.tab.col.s6
@@ -25,6 +25,11 @@ div.row
         components: {
             'user-login': UserLogin,
             'user-register': UserRegister
+        },
+        data() {
+          return {
+            logged: false
+          }
         }
     }
 </script>

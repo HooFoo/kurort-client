@@ -1,7 +1,7 @@
 <template lang="pug">
 .flex.layout-column
   #map
-    gmap-map( ':center'="center" ':zoom'="7")
+    gmap-map( ':center'="center" ':zoom'="zoom")
 </template>
 
 <script>
@@ -10,11 +10,12 @@
 
     Vue.use(VueGoogleMaps, {
         load: {
-          key: 'YOUR_API_TOKEN',
-          v: 'OPTIONAL VERSION NUMBER',
-          // libraries: 'places', //// If you need to use place input
+          key: '',
+          v: '3.26',
+          libraries: 'weather,geometry,visualization'
         }
     });
+
     export default {
         name: 'g-map',
         data() {
@@ -22,6 +23,19 @@
                 center: { lat: 55.75370903771494, lng: 37.61981338262558 },
                 zoom: 13
             }
+        },
+        created() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position)=>
+                    this.center = { lat: position.coords.latitude, lng: position.coords.longitude }
+                )
+            }
         }
     }
 </script>
+
+<style lang="scss">
+.vue-map-container {
+  height: calc(100vh - 56px);
+}
+</style>

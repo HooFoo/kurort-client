@@ -6,11 +6,11 @@ ul#nav-mobile.side-nav.fixed
   li.parent-list-item
     ul.collapsible( data-collapsible='expandable' )
       li
-        a.collapsible-header.indigo.active
+        div.collapsible-header.indigo.active
           i.material-icons map
           span.badge
-            i.material-icons expand_more
-            i.material-icons expand_less
+            i.material-icons.more expand_more
+            i.material-icons.less expand_less
           | Map
         div.collapsible-body
           ul
@@ -26,8 +26,8 @@ ul#nav-mobile.side-nav.fixed
         div.collapsible-header.indigo
           i.material-icons chat
           span.badge
-            i.material-icons expand_more
-            i.material-icons expand_less
+            i.material-icons.more expand_more
+            i.material-icons.less expand_less
           | Chat
         div.collapsible-body
 
@@ -45,3 +45,107 @@ ul#nav-mobile.side-nav.fixed
         }
     }
 </script>
+
+<style lang="scss">
+$primary-color: #3F51B5;
+
+.sign-up-submit {
+  width: 60%;
+  margin: 0px auto;
+  transition: width 0.3s ease-in-out;
+}
+.sign-up-submit.form-filled {
+  width: 100%;
+}
+
+.login-form {
+  input.btn {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background-color: $primary-color;
+    border-radius: 0;
+
+    &:active {
+      background-color: darken($primary-color, 5);
+    }
+  }
+}
+
+.side-nav li {
+  &.user-panel {
+    line-height: 1.5;
+    border-bottom: 1px solid #5C6BC0;
+    > .indigo {
+      padding-top: 1em;
+      margin-top: -1em;
+      overflow: hidden;
+    }
+  }
+
+  .collapsible-body {
+    padding: 0;
+
+    ul {
+      li {
+        a {
+          padding: 0 37.5px 0 45px;
+        }
+      }
+    }
+  }
+
+  .collapsible-header {
+    color: white;
+
+    .material-icons {
+      color: white;
+    }
+
+    .less {
+      display: none;
+    }
+
+    &.active {
+      .less {
+        display: inline-block;
+      }
+      .more {
+        display: none;
+      }
+    }
+  }
+}
+
+.nav-subcat {
+  color: white;
+  padding-left: 10px;
+}
+.subcat{
+  color: black;
+  text-align: left;
+  text-transform: none;
+}
+.adwords-area {
+  width: 100%;
+  color: rgba(100, 100, 100, 0.2);
+  text-align: center;
+  vertical-align: middle;
+}
+.search-wrapper {
+  position: relative;
+
+  input.search-box {
+    color: white;
+    padding-left: 26px;
+    width: 250px;
+
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.87);
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.87);
+    }
+  }
+}
+
+.autocomplete-item {
+  color: black;
+}
+</style>
