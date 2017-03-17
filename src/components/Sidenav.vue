@@ -3,6 +3,7 @@ ul#nav-mobile.side-nav.fixed
   li.user-panel.parent-list-item
     div.indigo
       user-widget
+      search-box
   li.parent-list-item
     ul.collapsible( data-collapsible='expandable' )
       li
@@ -37,11 +38,13 @@ ul#nav-mobile.side-nav.fixed
 
 <script>
     import UserWidget from './UserWidget'
+    import SearchBox from './SearchBox'
 
     export default {
         name: 'sidenav',
         components: {
-            'user-widget': UserWidget
+            'user-widget': UserWidget,
+            'search-box': SearchBox
         }
     }
 </script>
@@ -129,20 +132,6 @@ $primary-color: #3F51B5;
   color: rgba(100, 100, 100, 0.2);
   text-align: center;
   vertical-align: middle;
-}
-.search-wrapper {
-  position: relative;
-
-  input.search-box {
-    color: white;
-    padding-left: 26px;
-    width: 250px;
-
-    &:focus {
-      border-color: rgba(255, 255, 255, 0.87);
-      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.87);
-    }
-  }
 }
 
 .autocomplete-item {
