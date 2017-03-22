@@ -1,23 +1,21 @@
-<template>
-    <div>
-        <navbar></navbar>
-        <sidenav></sidenav>
-        <g-map></g-map>
-    </div>
+<template lang="pug">
+  div
+    navbar
+    sidenav
+    g-map
 </template>
 
 
 <script>
-    import Navbar from './Navbar'
-    import Sidenav from './Sidenav'
-    import GMap from './GMap'
+  import Navbar from './Navbar'
+  import Sidenav from './Sidenav'
+  import GMap from './GMap'
 
-    export default {
-        name: 'index',
-        components: {
-            navbar: Navbar,
-            sidenav: Sidenav,
-            'g-map': GMap
-        }
+  export default {
+    components: {
+      navbar: Navbar,
+      sidenav: Sidenav,
+      'g-map': GMap
     }
+  }
 </script>

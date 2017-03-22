@@ -1,16 +1,21 @@
 <template lang="pug">
-form.user-form( novalidate=true )
-  .input-field
-    label(for='email') Email
-    input.user-form-input( name='email' type='text' )
-  .input-field
-    label(for='password') Password
-    input.user-form-input( name='password' type='password' )
-  input.btn( type='submit' value='Register' )
+  form.user-form( novalidate=true )
+    .input-field
+      label(for='email') Email
+      input.validate( name='email' type='text' v-model='email' )
+    .input-field
+      label(for='password') Password
+      input.validate( name='password' type='password' v-model='password' )
+    input.btn( type='submit' value='Register' )
 </template>
 
 <script>
-    export default {
-        name: 'user-login'
+  export default {
+    data() {
+      return {
+        email: '',
+        password: ''
+      }
     }
+  }
 </script>
