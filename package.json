@@ -1,12 +1,14 @@
 {
   "name": "kurort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue.js project",
   "author": "HooFoo and Swember",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   },
   "dependencies": {
     "vue": "^2.2.2",
