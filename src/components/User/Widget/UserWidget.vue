@@ -15,20 +15,4 @@
       #sign-up-form.col.s12
         user-register
 </template>
-
-<script>
-  import UserLogin from './UserLogin'
-  import UserRegister from './UserRegister'
-
-  export default {
-    components: {
-      'user-login': UserLogin,
-      'user-register': UserRegister
-    },
-    data() {
-      return {
-        logged: false
-      }
-    }
-  }
-</script>
+<script src="./UserWidget.js"></script>

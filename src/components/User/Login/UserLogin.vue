@@ -1,5 +1,5 @@
 <template lang="pug">
-  form.user-form( novalidate=true )
+  form.user-form( novalidate=true 'v-on:submit.prevent'='submit')
     .input-field
       label(for='email') Email
       input.validate( name='email' type='text' v-model='email' )
@@ -9,13 +9,4 @@
     input.btn( type='submit' value='Register' )
 </template>
 
-<script>
-  export default {
-    data() {
-      return {
-        email: '',
-        password: ''
-      }
-    }
-  }
-</script>
+<script src="./UserLogin.js"></script>

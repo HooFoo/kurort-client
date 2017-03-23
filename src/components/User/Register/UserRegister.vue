@@ -1,5 +1,5 @@
 <template lang="pug">
-  form.user-form( novalidate=true )
+  form.user-form( novalidate=true 'v-on:sumbit.prevent'='submit' )
     .input-field
       label( for='username' ) Username
       input.user-form-input( name='username', type='text' v-model='username' )
@@ -15,15 +15,4 @@
     input.btn( type='submit', value='Login' )
 </template>
 
-<script>
-  export default {
-    data() {
-      return {
-        username: '',
-        email: '',
-        password: '',
-        passwordConfirmation: ''
-      }
-    }
-  }
-</script>
+<script src="./UserRegister.js"></script>

@@ -9,3 +9,8 @@
           a.page-title
             | Kurort
 </template>
+<script>
+  export default {
+    name: 'navbar'
+  }
+</script>
